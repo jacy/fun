@@ -3,7 +3,7 @@
 -compile(export_all). 
 
 las(L) ->
-	lcs(L,lists:sort(L), []).
+    lcs(L,lists:sort(L), []).
 
 lcs([],_,Acc) ->
     Acc;
