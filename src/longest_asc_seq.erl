@@ -13,7 +13,7 @@ lcs([Same|ST], [Same|TT], Acc)->
     [Same | lcs(ST,TT,[])];
 lcs(S, T, Acc) ->
     LCS1 = lcs(tl(S), T, Acc),
-	LCS2 = lcs(S, tl(T), Acc),
+    LCS2 = lcs(S, tl(T), Acc),
     case length(LCS1) < length(LCS2) of
         true -> LCS2;
         false ->LCS1
