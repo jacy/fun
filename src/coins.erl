@@ -2,7 +2,7 @@
 -compile(export_all). 
 
 count(N, L) ->
-print(count(N, L, [])).
+	print(count(N, L, [])).
 
 count(0, _, Ways) ->
 	Ways;
