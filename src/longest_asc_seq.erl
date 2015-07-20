@@ -9,7 +9,7 @@ lcs([],_,Acc) ->
     Acc;
 lcs(_,[],Acc) ->
     Acc;
-lcs([Same|ST], [Same|TT], Acc)->
+lcs([Same|ST], [Same|TT], _)->
     [Same | lcs(ST,TT,[])];
 lcs(S, T, Acc) ->
     LCS1 = lcs(tl(S), T, Acc),
