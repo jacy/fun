@@ -6,7 +6,7 @@ win_count(Buy, Result) ->
 		true -> 
 			combination(length(Buy) - 5 ,2);
 		false -> 
-		0
+			0
 	end.
 	
 int_to_bit(Num) ->
