@@ -1,6 +1,7 @@
 -module(bits).
 -compile(export_all). 
 
+-define(BUY_NUMS,lists:seq(1,8)).
 
 int_to_bit(Num) ->
 	1 bsl Num.
@@ -22,7 +23,7 @@ win_count(Buy, Result) ->
 		true -> 
 			combination(length(Buy) - 5 ,2);
 		false -> 
-		0
+			0
 	end.
 
 factorial(N) -> factorial(1, N, 1).
@@ -60,9 +61,9 @@ print_comb([]) ->
 print_comb([H|L]) ->
 	print_perm(permute(H)),
 	print_comb(L).
+	
 print_perm([]) ->
 	ok;
 print_perm([H|L]) ->
-	Buy = lists:seq(1,8),
-	io:format("b~p,r:~p,c:~p~n",[Buy, H, win_count(Buy,H)]),
+	win_count(?BUY_NUMS,H),
 	print_perm(L).
